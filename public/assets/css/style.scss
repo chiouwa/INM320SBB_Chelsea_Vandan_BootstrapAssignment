@@ -1,0 +1,34 @@
+// COLOURS
+$background-White: #F7F8FC;
+$dashboard-Colour: #363740;
+
+// FONTS
+$primary-Font: "muli", sans-serif;
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: $primary-Font;
+    display: flex;
+    flex-direction: row;
+}
+
+// BACKGROUND DISPLAYS
+.dashboard-menu {
+    width: 20vw;
+    height: 100vh;
+    background-color: $dashboard-Colour;
+}
+
+.overview-menu {
+    width: 80vw;
+    height: 100vh;
+    background-color: $background-White;
+    overflow: hidden;
+}
+
+.overview-tabs {
+    justify-content: center;
+}
+
+// DASHBOARD BUTTONS
