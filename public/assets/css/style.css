@@ -30,10 +30,16 @@ body {
   color: #A4A6B3;
 }
 .overview-menu {
-  width: 80vw;
+  width: 100vw;
   height: 100vh;
   background-color: #F7F8FC;
-  overflow: hidden;
+  overflow-x: hidden;
+}
+
+h4 {
+  color: #252733;
+  font-weight: 700;
+  margin: 2% 3%;
 }
 .nav-item a{
   color: #A4A6B3;
@@ -60,10 +66,106 @@ svg:hover {
   color: #DDE2FF;
 }
 .overview-tabs {
-  width: 75%;
-  height: 25%;
-  background: white;
-  border: 2px;
-  border-color: #363740;
-  border-radius: 5%;
+  width: 100%;
+  height: 15%;
+}
+.overview-tabs .row {
+  width: auto;
+  height: 100%;
+  text-align: center;
+  margin: 2% 2%;
+}
+.overview-tabs .row .col {
+  background-color: white;
+  padding: 1%;
+  margin: 1%;
+  border: solid 1px;
+  border-color: #DFE0EB;
+  border-radius: 15px;
+}
+.overview-tabs .row .col h6 {
+  padding: 1%;
+  margin: 1%;
+  color: #9FA2B4;
+  font-weight: 700;
+}
+.overview-tabs .row .col p {
+  padding: 1%;
+  margin: 1%;
+  color: #252733;
+  font-weight: 700;
+  font-size: 40pt;
+}
+.overview-tabs .row :hover {
+  border-color: #3751FF;
+  transition: 0.5s;
+}
+.overview-tabs .row :hover h6 {
+  color: #3751FF;
+  transition: 0.5s;
+}
+.overview-tabs .row :hover p {
+  color: #3751FF;
+  transition: 0.5s;
+}
+
+.trending-menu {
+  width: 94%;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  margin: 7% 3%;
+  border: solid 1px;
+  border-color: #DFE0EB;
+  border-radius: 15px;
+}
+.trending-menu .trending-graph {
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  border-right: solid 1px #DFE0EB;
+  padding: 3%;
+}
+.trending-menu .trending-graph h5 {
+  color: #252733;
+  font-weight: 700;
+}
+.trending-menu .trending-graph .trending-image {
+  margin-top: 10%;
+  scale: 0.95;
+}
+.trending-menu .trending-graph .today-trends {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.trending-menu .trending-graph .today-trends .col3 {
+  width: 90%;
+  height: 20%;
+}
+.trending-menu .trending-graph .today-trends .col3 p {
+  font-size: small;
+  color: #9FA2B4;
+}
+.trending-menu .trending-graph .today-trends .col3 img {
+  transform: scale(1);
+  padding-left: 45%;
+}
+.trending-menu .trending-stats {
+  width: 50%;
+  height: 100%;
+}
+.trending-menu .trending-stats :not(:last-child) {
+  border-bottom: solid 1px #DFE0EB;
+}
+.trending-menu .trending-stats .col2 {
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  padding: 2%;
+  background-color: white;
+  color: #9FA2B4;
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */

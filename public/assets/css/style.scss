@@ -1,9 +1,53 @@
 // COLOURS
 $background-White: #F7F8FC;
 $dashboard-Colour: #363740;
+$header-colour: #252733;
+$text-colour-1: #9FA2B4;
+$border-colour-1: #DFE0EB;
+$accent-colour: #3751FF;
 
 // FONTS
 $primary-Font: "muli", sans-serif;
+$font-Bold: 700; 
+$centre: center;
+
+// MIXINS
+@mixin margin-settings {
+    margin: 5% 3%;
+}
+
+@mixin tab-settings {
+    padding: 1%;
+    margin: 1%;
+}
+
+@mixin tab2-settings {
+    padding: 1%;
+}
+
+@mixin border-settings {
+    border: solid 1px;
+    border-color: $border-colour-1;
+    border-radius: 15px;
+}
+
+@mixin Subheading-text {
+    color: $text-colour-1;
+    font-weight: $font-Bold;
+}
+
+@mixin Accent-hover {
+    color: $accent-colour;
+    transition: 0.5s;
+}
+
+@mixin Stat-text {
+    color: $header-colour;
+    font-weight: $font-Bold;
+    font-size: 40pt;
+}
+
+$border-settings: solid 1px $border-colour-1;
 
 body {
     width: 100vw;
@@ -21,19 +65,114 @@ body {
 }
 
 .overview-menu {
-    width: 80vw;
+    width: 100vw;
     height: 100vh;
     background-color: $background-White;
-    overflow: hidden;
+    overflow-x: hidden;
+}
+
+// OVERVIEW PAGE
+h4 {
+    color: $header-colour;
+    font-weight: $font-Bold;
+    margin: 2% 3%;
 }
 
 .overview-tabs {
-    width: 75%;
-    height: 25%;
-    background: white;
-    border: 2px;
-    border-color: $dashboard-Colour;
-    border-radius: 5%;
+    width: 100%;
+    height: 15%;
+
+    .row {
+        width: auto;
+        height: 100%;
+        text-align: $centre;
+        margin: 2% 2%;
+        .col {  
+            background-color: white;
+            @include tab-settings();
+            @include border-settings();
+            h6 {
+                @include tab-settings();
+                @include Subheading-text();
+            }
+            p {
+                @include tab-settings();
+                @include Stat-text();
+            }
+        }
+        :hover {
+            border-color: #3751FF;
+            transition: 0.5s;
+            h6 {
+                @include Accent-hover();
+            }
+            p {
+                @include Accent-hover();
+            }
+        }
+    }
+}
+
+.trending-menu {
+    width: 94%;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin: 7% 3%;
+    @include border-settings();
+
+    .trending-graph {
+        text-align: left;
+        width: 100%;
+        height: 100%;
+        border-right: $border-settings;
+        padding: 3%;
+
+        h5 {
+            color: $header-colour;
+            font-weight: $font-Bold;
+        }
+        .trending-image {
+            margin-top: 10%;
+            scale: 0.95;
+        }
+        .today-trends {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .col3 {
+                width: 90%;
+                height: 20%;
+                p {
+                    font-size: small;
+                    color: $text-colour-1;
+                }
+                img {
+                    transform: scale(1);
+                    padding-left: 45%;
+                }
+            }
+        }
+    }
+
+    .trending-stats { 
+        width: 50%;
+        height: 100%;
+        :not(:last-child){
+            border-bottom: $border-settings;
+        }
+
+        .col2 { 
+            width: 100%;
+            height: 20%;
+            text-align: $centre;
+            padding: 2%;
+            background-color: white;
+            @include Subheading-text();
+        }
+    }
 }
 
 // DASHBOARD BUTTONS
