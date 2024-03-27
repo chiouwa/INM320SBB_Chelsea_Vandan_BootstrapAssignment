@@ -299,6 +299,7 @@ body {
 }
 .bottom-graphs .bottomgraph-2 .row.row-cols-2 :nth-child(4) span {
   font-size: smaller;
+  font-weight: 600;
   padding: 1%;
   color: white;
 }
@@ -311,6 +312,7 @@ body {
 }
 .bottom-graphs .bottomgraph-2 .row.row-cols-2 :nth-child(6) span {
   font-size: smaller;
+  font-weight: 600;
   padding: 1%;
   color: white;
 }
@@ -323,6 +325,7 @@ body {
 }
 .bottom-graphs .bottomgraph-2 .row.row-cols-2 :nth-child(8) span {
   font-size: smaller;
+  font-weight: 600;
   padding: 1%;
   color: #9FA2B4;
 }
