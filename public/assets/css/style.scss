@@ -1,9 +1,37 @@
 // COLOURS
 $background-White: #F7F8FC;
 $dashboard-Colour: #363740;
+$header-colour: #252733;
+$text-colour-1: #9FA2B4;
+$border-colour-1: #DFE0EB;
 
 // FONTS
 $primary-Font: "muli", sans-serif;
+$font-Bold: 700; 
+$centre: center;
+
+// MIXINS
+@mixin tab-settings {
+    padding: 1%;
+    margin: 1%;
+}
+
+@mixin tab2-settings {
+    padding: 1%;
+}
+
+@mixin border-settings {
+    border: solid 1px;
+    border-color: $border-colour-1;
+    border-radius: 15px;
+}
+
+@mixin Subheading-text {
+    color: $text-colour-1;
+    font-weight: $font-Bold;
+}
+
+$border-settings: solid 1px $border-colour-1;
 
 body {
     width: 100vw;
@@ -21,19 +49,69 @@ body {
 }
 
 .overview-menu {
-    width: 80vw;
+    width: 100vw;
     height: 100vh;
     background-color: $background-White;
-    overflow: hidden;
+    overflow-x: hidden;
+}
+
+// OVERVIEW PAGE
+h4 {
+    @include tab-settings();
+    color: $header-colour;
+    font-weight: $font-Bold;
+    margin-left: 2%;
 }
 
 .overview-tabs {
-    width: 75%;
-    height: 25%;
-    background: white;
-    border: 2px;
-    border-color: $dashboard-Colour;
-    border-radius: 5%;
+    width: 100%;
+    height: 30%;
+
+    .row {
+        width: auto;
+        height: 80%;
+        text-align: $centre;
+        margin: 2%;
+        @include Subheading-text();
+        .col {  
+            background-color: white;
+            @include tab-settings();
+            @include border-settings();
+        }
+    }
+}
+
+.trending-menu {
+    width: 94%;
+    height: 60vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin: 3%;
+    @include border-settings();
+
+    .trending-graph {
+        text-align: $centre;
+        width: 100%;
+        height: 100%;
+        border-right: $border-settings;
+    }
+    .trending-stats { 
+        width: 50%;
+        height: 100%;
+        :not(:last-child){
+            border-bottom: $border-settings;
+        }
+        .col2 { 
+            width: 100%;
+            height: 20%;
+            text-align: $centre;
+            padding: 2%;
+            background-color: white;
+            @include Subheading-text();
+        }
+    }
 }
 
 // DASHBOARD BUTTONS
