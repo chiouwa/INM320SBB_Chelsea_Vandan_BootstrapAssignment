@@ -4,6 +4,7 @@ $dashboard-Colour: #363740;
 $header-colour: #252733;
 $text-colour-1: #9FA2B4;
 $border-colour-1: #DFE0EB;
+$accent-colour: #3751FF;
 
 // FONTS
 $primary-Font: "muli", sans-serif;
@@ -11,6 +12,10 @@ $font-Bold: 700;
 $centre: center;
 
 // MIXINS
+@mixin margin-settings {
+    margin: 5% 3%;
+}
+
 @mixin tab-settings {
     padding: 1%;
     margin: 1%;
@@ -29,6 +34,17 @@ $centre: center;
 @mixin Subheading-text {
     color: $text-colour-1;
     font-weight: $font-Bold;
+}
+
+@mixin Accent-hover {
+    color: $accent-colour;
+    transition: 0.5s;
+}
+
+@mixin Stat-text {
+    color: $header-colour;
+    font-weight: $font-Bold;
+    font-size: 40pt;
 }
 
 $border-settings: solid 1px $border-colour-1;
@@ -57,52 +73,97 @@ body {
 
 // OVERVIEW PAGE
 h4 {
-    @include tab-settings();
     color: $header-colour;
     font-weight: $font-Bold;
-    margin-left: 2%;
+    margin: 2% 3%;
 }
 
 .overview-tabs {
     width: 100%;
-    height: 30%;
+    height: 15%;
 
     .row {
         width: auto;
-        height: 80%;
+        height: 100%;
         text-align: $centre;
-        margin: 2%;
-        @include Subheading-text();
+        margin: 2% 2%;
         .col {  
             background-color: white;
             @include tab-settings();
             @include border-settings();
+            h6 {
+                @include tab-settings();
+                @include Subheading-text();
+            }
+            p {
+                @include tab-settings();
+                @include Stat-text();
+            }
+        }
+        :hover {
+            border-color: #3751FF;
+            transition: 0.5s;
+            h6 {
+                @include Accent-hover();
+            }
+            p {
+                @include Accent-hover();
+            }
         }
     }
 }
 
 .trending-menu {
     width: 94%;
-    height: 60vh;
+    height: 80vh;
     overflow: hidden;
     display: flex;
     flex-direction: row;
     background-color: white;
-    margin: 3%;
+    margin: 7% 3%;
     @include border-settings();
 
     .trending-graph {
-        text-align: $centre;
+        text-align: left;
         width: 100%;
         height: 100%;
         border-right: $border-settings;
+        padding: 3%;
+
+        h5 {
+            color: $header-colour;
+            font-weight: $font-Bold;
+        }
+        .trending-image {
+            margin-top: 10%;
+            scale: 0.95;
+        }
+        .today-trends {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .col3 {
+                width: 90%;
+                height: 20%;
+                p {
+                    font-size: small;
+                    color: $text-colour-1;
+                }
+                img {
+                    transform: scale(1);
+                    padding-left: 45%;
+                }
+            }
+        }
     }
+
     .trending-stats { 
         width: 50%;
         height: 100%;
         :not(:last-child){
             border-bottom: $border-settings;
         }
+
         .col2 { 
             width: 100%;
             height: 20%;
