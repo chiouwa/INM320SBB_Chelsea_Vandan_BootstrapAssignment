@@ -72,12 +72,36 @@ body {
     overflow-x: hidden;
 }
 
-// OVERVIEW PAGE
-h4 {
-    color: $header-colour;
-    font-weight: $font-Bold;
-    margin: 2% 3%;
+.overview {
+    width: 100vw;
+    height: 5%;
+    display: flex;
+    flex-direction: row;
+    margin: 3%;
+
+    h4 {
+        color: $header-colour;
+        font-weight: $font-Bold;
+    }
+    .col-7 {
+        padding-left: 50%;
+        padding-top: 0.20%;
+        img {
+            padding: 5%;
+        }
+    }
+    .col-5 {
+        display: flex;
+        flex-direction: row;
+        margin-left: -2%;
+        p {
+            padding-left: 3%;
+            margin: 8px;
+        }
+    }
 }
+
+// OVERVIEW PAGE
 
 .overview-tabs {
     width: 100%;
@@ -170,9 +194,17 @@ h4 {
             width: 100%;
             height: 20%;
             text-align: $centre;
-            padding: 2%;
+            padding: 5%;
             background-color: white;
-            @include Subheading-text();
+            h6 {
+                @include Subheading-text();
+                border-bottom: none;
+            }
+            p {
+                color: $header-colour;
+                font-weight: $font-Bold;
+                font-size: 24pt;
+            }
         }
     }
 }
