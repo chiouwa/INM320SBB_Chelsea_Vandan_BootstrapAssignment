@@ -6,19 +6,59 @@ body {
   flex-direction: row;
 }
 
+#logo {
+  padding: 25px 10px 30px 25px;
+  display: flex;
+}
+
+#logo h1{
+  font-size: 19px;
+  color:#A4a6b3;
+  padding-top: 4px;
+  padding-left: 5px;
+}
+#logo svg {
+  padding-right: 5px;
+  display: inline;
+}
 .dashboard-menu {
-  width: 20vw;
+  width: 15vw;
   height: 100vh;
   background-color: #363740;
 }
-
+.dashboard-menu ul li a {
+  color: #A4A6B3;
+}
 .overview-menu {
   width: 80vw;
   height: 100vh;
   background-color: #F7F8FC;
   overflow: hidden;
 }
-
+.nav-item a{
+  color: #A4A6B3;
+  padding-left: 2px;
+  display: flex;
+  padding-left: 25px;
+  padding-top: 18px;
+  height: 55px;
+}
+.nav-item a h1{
+  font-size: 16px;
+  padding-left: 10px;
+  margin-top: -2px;
+}
+.nav-item:hover{
+  background-color: rgba(255,255,255,0.1);
+  border-left: white 2px solid;
+  height: 55px
+}
+.nav-item a:hover{
+  color: #DDE2FF;
+}
+svg:hover {
+  color: #DDE2FF;
+}
 .overview-tabs {
   width: 75%;
   height: 25%;
