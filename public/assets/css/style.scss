@@ -209,8 +209,192 @@ body {
     }
 }
 
-// DASHBOARD BUTTONS
 
+// BOTTOM GRAPHS
+.bottom-graphs {
+    width: 94%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: -3% 3% 2%;
+
+    .bottomgraph-1 {
+        width: 48%;
+        height: 50vh;
+        background-color: white;
+        @include border-settings();
+
+        .header1 {
+            width: 100%;
+            height: 15%;
+            display: flex;
+            flex-direction: row;
+            padding: 6% 5% 0%;
+
+            h6 {
+                width: 50%;
+                height: 20%;
+                color: $header-colour;
+                font-weight: $font-Bold;
+            }
+            h7 {
+                width: 50%;
+                height: 20%;
+                text-align: right;
+                color: $accent-colour;
+            }
+        }
+
+        p {
+            font-size: smaller;
+            width: 100%;
+            padding: 0% 5% 1%;
+
+            span {
+                @include Subheading-text()
+            }
+        }
+
+        .row.row-cols-2 {
+            width: 102.5%;
+            height: 75%;
+            padding-left: 2%;
+
+            .col {
+                border-top: solid 1px $border-colour-1;
+                padding-top: 3%;
+            }
+
+            :first-child {
+                border-top: solid 1px white;
+            }
+
+            :nth-child(2) {
+                border-top: solid 1px white;
+            }
+
+            :nth-child(even){
+                text-align: right;
+                @include Subheading-text();
+            }
+            :nth-child(odd){
+                font-weight: $font-Bold;
+            }
+        }
+    }
+
+    .bottomgraph-2 {
+        width: 48%;
+        height: 50vh;
+        background-color: white;
+        @include border-settings();
+
+        .header2 {
+            width: 100%;
+            height: 15%;
+            display: flex;
+            flex-direction: row;
+            padding: 6% 5% 0%;
+
+            h6 {
+                width: 50%;
+                height: 20%;
+                color: $header-colour;
+                font-weight: $font-Bold;
+            }
+            h7 {
+                width: 50%;
+                height: 20%;
+                text-align: right;
+                color: $accent-colour;
+            }
+        }
+
+        p {
+            font-size: smaller;
+            width: 100%;
+            padding: 0% 5% 1%;
+            color: $text-colour-1;
+        }
+
+        .row.row-cols-2 {
+            width: 102.5%;
+            height: 75%;
+            padding-left: 2%;
+
+            .col {
+                border-top: solid 1px $border-colour-1;
+                padding-top: 3%;
+                font-weight: 600;
+            }
+
+            :first-child {
+                color: $header-colour;
+                border-top: none;
+                span {
+                    padding: 1%;
+                    color: $text-colour-1;
+                }
+            }
+
+            :nth-child(2) {
+                border-top: none;
+            }
+
+            :nth-child(even){
+                text-align: right;
+            }
+
+            :nth-child(4){
+                button {
+                    width: 30%;
+                    height: 60%;
+                    background-color: #FEC400;
+                    border: none;
+                    border-radius: 8px;
+                }
+                span {
+                    font-size: smaller;
+                    padding: 1%;
+                    color: white;
+                }
+            }
+
+            :nth-child(6){
+                button {
+                    width: 25%;
+                    height: 60%;
+                    background-color: #29CC97;
+                    border: none;
+                    border-radius: 8px;
+                }
+                span {
+                    font-size: smaller;
+                    padding: 1%;
+                    color: white;
+                }
+            }
+            
+            :nth-child(8){
+                button {
+                    width: 40%;
+                    height: 60%;
+                    background-color: #F0F1F7;
+                    border: none;
+                    border-radius: 8px;
+                }
+                span {
+                    font-size: smaller;
+                    padding: 1%;
+                    color: $text-colour-1;
+                }
+            }
+        }
+    }
+}
+
+// DASHBOARD BUTTONS
   .dashboard-menu {
     width: 15vw;
     height: 100vh;

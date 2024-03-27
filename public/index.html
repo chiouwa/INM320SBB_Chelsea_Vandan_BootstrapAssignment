@@ -227,54 +227,70 @@
                 </div>
             </div>
         </div>
-        <div class="bottomgraphs">
-            <ul class="list-group">
-                <li class="list-group-item"><span id="head">Unresolved tickets</span><br><span
-                        id="subhead1">Group:</span><span id="subhead2"> Support</span><br><span id>Waiting on Feature Request</span><h6>
-                        <span id="vd">View details</span> 4238</h6>
-                </li>
-                <li class="list-group-item">Awaiting Customer Response<h6>1005</h6>
-                </li>
-                <li class="list-group-item">Awaiting Developer Fix<h6>914</h6>
-                </li>
-                <li class="list-group-item">Pending<h6>281</h6>
-                </li>
-            </ul>
-            <ul class="list-group">
-                <li class="list-group-item">Tasks<span id="td">Today</span><span id="cnt">Create new task</span><span id="va">View all</span>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="24" height="24" rx="8" fill="#F0F1F7"/>
-                        <path d="M12 7V17" stroke="#9FA2B4" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M17 12L7 12" stroke="#9FA2B4" stroke-width="2" stroke-linecap="round"/>
-                        </svg></li>
-                <li class="list-group-item">
-                    <div class="form-check">
+        <div class="bottom-graphs">
+            <div class="bottomgraph-1">
+                <div class="header1">
+                    <h6>Unresolved tickets</h6>
+                    <h7>View details</h7>
+                </div>
+                <p><span>Group:</span> Support</p>
+                <div class="row row-cols-2">
+                    <div class="col">Waiting on Feature Request</div>
+                    <div class="col">4238</div>
+                    <div class="col">Awaiting Customer Response</div>
+                    <div class="col">1005</div>
+                    <div class="col">Awaiting Developer Fix</div>
+                    <div class="col">914</div>
+                    <div class="col">Pending</div>
+                    <div class="col">281</div>
+                </div>
+            </div>
+            <div class="bottomgraph-2">
+                <div class="header2">
+                    <h6>Today</h6>
+                    <h7>View all</h7>
+                </div>
+                <p>Today</p>
+                <div class="row row-cols-2">
+                    <div class="col">
+                        <span>Create new task</span>
+                    </div>
+                    <div class="col">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="8" fill="#F0F1F7"/>
+                            <path d="M12 7V17" stroke="#9FA2B4" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M17 12L7 12" stroke="#9FA2B4" stroke-width="2" stroke-linecap="round"/>
+                        </svg></li> 
+                    </div>
+                    <div class="col">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             Finished ticket update
                         </label>
-                        <button type="button" class="btn btn-warning">URGENT</button>
                     </div>
-                </li>
-                <li class="list-group-item">
-                    <div class="form-check">
+                    <div class="col">
+                        <button type="button"><span>URGENT</span></button>
+                    </div>
+                    <div class="col">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             Create new ticket example
                         </label>
-                        <button type="button" class="btn btn-success">NEW</button>
                     </div>
-                </li>
-                <li class="list-group-item">
-                    <div class="form-check">
+                    <div class="col">
+                        <button type="button"><span>NEW</span></button>
+                    </div>
+                    <div class="col">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
                         <label class="form-check-label" for="flexCheckChecked">
                             Update ticket report
                         </label>
-                        <button type="button" class="btn btn-secondary">DEFAULT</button>
                     </div>
-                </li>
-            </ul>
+                    <div class="col">
+                        <button type="button"><span>DEFAULT</span></button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
